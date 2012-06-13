@@ -1,0 +1,7 @@
+require "omniauth-namba/version"
+
+module Omniauth
+  module Namba
+    # Your code goes here...
+  end
+end

@@ -16,7 +16,7 @@ module OmniAuth
 
 			option :fields, ["status", "login", "firstname", "lastname", "birthdate", "sex", "avatar"]
 
-      uid{ raw_info['login'] }
+      uid { raw_info['login'] }
 
       info do
         {

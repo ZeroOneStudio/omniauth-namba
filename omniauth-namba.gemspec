@@ -3,10 +3,11 @@ $:.push File.expand_path("../lib", __FILE__)
 require "omniauth-namba/version"
 
 Gem::Specification.new do |gem|
-  gem.authors       = ["Sergey Kishenin"]
-  gem.email         = ["sergey.kishenin@gmail.com"]
+  gem.authors       = ["Sergey Kishenin", "Michael Romanenko"]
+  gem.email         = ["sergey.kishenin@gmail.com", "michael@romanenko.kg"]
   gem.description   = %q{Authenticate to Namba using OAuth.}
   gem.summary       = %q{Authenticate to Namba using OAuth.}
+	gem.homepage      = "https://github.com/ZeroOneStudio/omniauth-namba"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }

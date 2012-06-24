@@ -36,10 +36,11 @@ module OmniAuth
       end
 
       def raw_info
-        @raw_info ||= MultiJson.decode(access_token.post('http://api.namba.kg/getUserInfo2.php').body)
+        @raw_info ||= MultiJson.load(access_token.get('http://api.namba.kg/getUserInfo2.php').body)
       rescue ::Errno::ETIMEDOUT
         raise ::Timeout::Error
       end
+
     end
   end
 end

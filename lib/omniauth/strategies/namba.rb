@@ -8,9 +8,10 @@ module OmniAuth
 
       option :name, "namba"
       option :client_options, {
-        :request_token_url => "http://api.namba.kg/oauth/request_token.php", 
+        :site => "http://api.namba.kg",
+        :request_token_path => "/oauth/request_token.php", 
         :authorize_url => "http://login.namba.kg/login2.php",
-        :access_token_url => "http://api.namba.kg/oauth/access_token.php"
+        :access_token_path => "/oauth/access_token.php"
       }
 
       option :fields, ["status", "login", "firstname", "lastname", "birthdate", "sex", "avatar"]

@@ -5,7 +5,7 @@ describe "OmniAuth Namba" do
     OmniAuth::Strategies::Namba.new(nil, @options || {})
   end	
 
-	it 'should add a camelization for itself' do
+  it 'should add a camelization for itself' do
     OmniAuth::Utils.camelize('namba').should == 'Namba'
   end
 end

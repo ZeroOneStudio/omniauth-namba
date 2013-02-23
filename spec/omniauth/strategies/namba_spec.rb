@@ -10,18 +10,18 @@ describe "OmniAuth Namba" do
   end
 
   it 'should has correct Namba site' do
-    subject.options.client_options.site.should eq('http://api.namba.kg')
+    subject.options.client_options.site.should eq("http://api.namba.#{subject.options.locale}")
   end
 
   it 'should has correct request token path' do
-    subject.options.client_options.request_token_path.should eq('/oauth/request_token.php')
+    subject.options.client_options.request_token_path.should eq("/oauth/request_token.php")
   end
 
   it 'should has correct access token path' do
-    subject.options.client_options.access_token_path.should eq('/oauth/access_token.php')
+    subject.options.client_options.access_token_path.should eq("/oauth/access_token.php")
   end
 
   it 'should has correct authorize url' do
-    subject.options.client_options.authorize_url.should eq('http://login.namba.kg/login2.php')
+    subject.options.client_options.authorize_url.should eq("http://login.namba.#{subject.options.locale}/login2.php")
   end
 end

@@ -7,11 +7,11 @@ module OmniAuth
     class Namba < OmniAuth::Strategies::OAuth
 
       option :name, "namba"
-      option :locale, "kg"
       option :client_options, {
-        :site => "http://api.namba.#{default_options.locale}",
+        :locale => "kg",
+        :site => "http://api.namba.kg",
         :request_token_path => "/oauth/request_token.php", 
-        :authorize_url => "http://login.namba.#{default_options.locale}/login2.php",
+        :authorize_url => "http://login.namba.kg/login2.php",
         :access_token_path => "/oauth/access_token.php"
       }
 
@@ -37,8 +37,15 @@ module OmniAuth
         }
       end
 
+      def initialize app, *args, &block
+        super
+        raise ArgumentError.new("Available locales are only kg or kz") if !%w(kg kz).include? options.locale
+        options.client_options.site = "http://api.namba.#{options.locale}"
+        options.client_options.authorize_url = "http://login.namba.#{options.locale}/login2.php"
+      end
+
       def raw_info
-        @raw_info ||= MultiJson.load(access_token.get("http://api.namba.#{default_options.locale}/getUserInfo2.php").body)
+        @raw_info ||= MultiJson.load(access_token.get("http://api.namba.#{options.locale}/getUserInfo2.php").body)
       rescue ::Errno::ETIMEDOUT
         raise ::Timeout::Error
       end

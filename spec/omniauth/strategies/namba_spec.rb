@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "OmniAuth Namba" do
   subject do
-    OmniAuth::Strategies::Namba.new(nil, @options || {})
+    OmniAuth::Strategies::Namba.new(nil, { :locale => "kg" })
   end	
 
   it 'should add a camelization for itself' do
@@ -23,5 +23,11 @@ describe "OmniAuth Namba" do
 
   it 'should has correct authorize url' do
     subject.options.client_options.authorize_url.should eq("http://login.namba.#{subject.options.locale}/login2.php")
+  end
+
+  it 'should not allow add locales except kg or kz' do
+    expect {
+      OmniAuth::Strategies::Namba.new(nil, { :locale => "za" })
+    }.to raise_error(ArgumentError, "Available locales are only kg or kz")
   end
 end

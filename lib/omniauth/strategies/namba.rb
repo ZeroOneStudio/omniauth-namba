@@ -39,13 +39,13 @@ module OmniAuth
 
       def initialize app, *args, &block
         super
-        raise ArgumentError.new("Available locales are only kg or net") if !%w(kg net).include? options.locale
-        options.client_options.site = "http://api.namba.#{options.locale}"
-        options.client_options.authorize_url = "http://login.namba.#{options.locale}/login2.php"
+        raise ArgumentError.new("Available locales are only kg or net") if options.locale && !%w(kg net).include?(options.locale)
+        options.client_options.site = "http://api.namba.#{options.locale || 'kg'}"
+        options.client_options.authorize_url = "http://login.namba.#{options.locale || 'kg'}/login2.php"
       end
 
       def raw_info
-        @raw_info ||= MultiJson.load(access_token.get("http://api.namba.#{options.locale}/getUserInfo2.php").body)
+        @raw_info ||= MultiJson.load(access_token.get("http://api.namba.#{options.locale || 'kg'}/getUserInfo2.php").body)
       rescue ::Errno::ETIMEDOUT
         raise ::Timeout::Error
       end

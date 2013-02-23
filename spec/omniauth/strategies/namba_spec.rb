@@ -28,6 +28,6 @@ describe "OmniAuth Namba" do
   it 'should not allow add locales except kg or kz' do
     expect {
       OmniAuth::Strategies::Namba.new(nil, { :locale => "za" })
-    }.to raise_error(ArgumentError, "Available locales are only kg or kz")
+    }.to raise_error(ArgumentError, "Available locales are only kg or net")
   end
 end

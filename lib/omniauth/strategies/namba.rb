@@ -39,7 +39,7 @@ module OmniAuth
 
       def initialize app, *args, &block
         super
-        raise ArgumentError.new("Available locales are only kg or kz") if !%w(kg kz).include? options.locale
+        raise ArgumentError.new("Available locales are only kg or net") if !%w(kg net).include? options.locale
         options.client_options.site = "http://api.namba.#{options.locale}"
         options.client_options.authorize_url = "http://login.namba.#{options.locale}/login2.php"
       end

@@ -12,20 +12,22 @@ Add the strategy to your `Gemfile`:
 For a Rails application you'd now create an initializer `config/initializers/omniauth.rb`:
 
     Rails.application.config.middleware.use OmniAuth::Builder do
-      provider :namba, 'key', 'secret'
+      provider :namba, 'key', 'secret', locale: "kg"
     end
 
 Or for a Rack application:
 
     use OmniAuth::Builder do
-      provider :namba, "key", "secret"
+      provider :namba, "key", "secret", locale: "kg"
     end
 
 If you use omniauth with Devise just add configuration to `devise.rb` initializer:
  
     Devise.setup do |config|
-      config.omniauth :namba, "key", "secret"   
+      config.omniauth :namba, "key", "secret", locale: "kg"   
     end     
+
+Use `:net` locale if you want to access [namba.net][] API. `"kg"` is the default locale so you can simply use `provider :namba, "key", "secret"`
 
 ## Auth hash
 

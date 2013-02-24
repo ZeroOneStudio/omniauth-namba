@@ -27,7 +27,7 @@ If you use omniauth with Devise just add configuration to `devise.rb` initialize
       config.omniauth :namba, "key", "secret", locale: "kg"   
     end     
 
-Use `:net` locale if you want to access [namba.net][] API. `"kg"` is the default locale so you can simply use `provider :namba, "key", "secret"`
+Use `"net"` locale if you want to access [namba.net][] API. `"kg"` is the default locale so you can simply use `provider :namba, "key", "secret"`
 
 [namba.net]: http://www.namba.net
 

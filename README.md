@@ -43,7 +43,7 @@ Use `"net"` locale if you want to access [namba.net][] API. `"kg"` is the defaul
       :avatar => "0000000,0000000,0000000"
     }
 
-Detailed description of each fields goes [here][].
+Detailed description of each field goes [here][].
 
 [here]: http://dev.namba.kg/api_description.php
 

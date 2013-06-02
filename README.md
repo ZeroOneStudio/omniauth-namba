@@ -1,5 +1,6 @@
 ## omniauth-namba Ruby gem
 
+[![Gem Version](https://badge.fury.io/rb/omniauth-namba.png)](http://badge.fury.io/rb/omniauth-namba)
 [![Build Status](https://secure.travis-ci.org/ZeroOneStudio/omniauth-namba.png)](http://travis-ci.org/ZeroOneStudio/omniauth-namba)
 
 This gem contains the Namba.kg strategy for OmniAuth. Namba.kg uses the OAuth 1.0a flow.

@@ -55,5 +55,5 @@ Many thanks to [@puzanov][] for active promotion.
 [@puzanov]: https://github.com/puzanov
 
 ## Licence
-MIT License. Copyright (c) 2012 ZERO.ONE
+MIT License. Copyright (c) 2013 ZERO.ONE
 

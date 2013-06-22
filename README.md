@@ -1,5 +1,6 @@
 ## omniauth-namba Ruby gem
 
+[![Gem Version](https://badge.fury.io/rb/omniauth-namba.png)](http://badge.fury.io/rb/omniauth-namba)
 [![Build Status](https://secure.travis-ci.org/ZeroOneStudio/omniauth-namba.png)](http://travis-ci.org/ZeroOneStudio/omniauth-namba)
 [![Coverage Status](https://coveralls.io/repos/ZeroOneStudio/namba/badge.png)](https://coveralls.io/r/ZeroOneStudio/namba)
 [![Dependency Status](https://gemnasium.com/ZeroOneStudio/namba.png)](https://gemnasium.com/ZeroOneStudio/namba)
@@ -29,7 +30,7 @@ If you use omniauth with Devise just add configuration to `devise.rb` initialize
       config.omniauth :namba, "key", "secret", locale: "kg"   
     end     
 
-Use `:net` locale if you want to access [namba.net][] API. `"kg"` is the default locale so you can simply use `provider :namba, "key", "secret"`
+Use `"net"` locale if you want to access [namba.net][] API. `"kg"` is the default locale so you can simply use `provider :namba, "key", "secret"`
 
 [namba.net]: http://www.namba.net
 
@@ -45,7 +46,7 @@ Use `:net` locale if you want to access [namba.net][] API. `"kg"` is the default
       :avatar => "0000000,0000000,0000000"
     }
 
-Detailed description of each fields goes [here][].
+Detailed description of each field goes [here][].
 
 [here]: http://dev.namba.kg/api_description.php
 
@@ -56,5 +57,5 @@ Many thanks to [@puzanov][] for active promotion.
 [@puzanov]: https://github.com/puzanov
 
 ## Licence
-MIT License. Copyright (c) 2012 ZERO.ONE
+MIT License. Copyright (c) 2013 ZERO.ONE
 

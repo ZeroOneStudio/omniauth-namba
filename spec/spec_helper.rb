@@ -6,6 +6,9 @@ require 'rack/test'
 require 'webmock/rspec'
 require 'omniauth'
 require 'omniauth-namba'
+require 'coveralls'
+
+Coveralls.wear!
 
 RSpec.configure do |config|
   config.include WebMock::API

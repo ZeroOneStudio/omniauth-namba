@@ -1,14 +1,8 @@
 source "http://rubygems.org"
 
+group :test do
+  gem "coveralls", :require => false
+end
+
 # Specify your gem's dependencies in omniauth-linkedin.gemspec
 gemspec
-
-gem 'omniauth-oauth', :git => 'https://github.com/intridea/omniauth-oauth.git'
-
-group :development, :test do
-  gem 'guard'
-  gem 'guard-rspec'
-  gem 'guard-bundler'
-  gem 'libnotify'
-  gem 'multi_json'
-end

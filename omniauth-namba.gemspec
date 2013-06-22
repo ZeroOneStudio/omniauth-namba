@@ -16,10 +16,13 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Omniauth::Namba::VERSION
 
-  gem.add_runtime_dependency 'omniauth-oauth', '~> 1.0.0'
+  gem.add_runtime_dependency "omniauth-oauth"
 
-  gem.add_development_dependency 'rspec', '~> 2.7.0'
-  gem.add_development_dependency 'rake'
-  gem.add_development_dependency 'webmock'
-  gem.add_development_dependency 'rack-test'
+  gem.add_development_dependency "rspec"
+  gem.add_development_dependency "rake"
+  gem.add_development_dependency "guard"
+  gem.add_development_dependency "guard-rspec"
+  gem.add_development_dependency "webmock"
+  gem.add_development_dependency "rack-test"
+  gem.add_development_dependency "multi_json"
 end

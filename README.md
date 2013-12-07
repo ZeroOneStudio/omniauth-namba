@@ -63,3 +63,7 @@ MIT License. Copyright (c) 2012-2013 [ZERO.ONE][]
 [ZERO.ONE]: http://zeroone.st
 
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ZeroOneStudio/omniauth-namba/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+

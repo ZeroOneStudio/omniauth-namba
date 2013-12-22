@@ -5,6 +5,7 @@
 [![Coverage Status](https://coveralls.io/repos/ZeroOneStudio/omniauth-namba/badge.png)](https://coveralls.io/r/ZeroOneStudio/omniauth-namba)
 [![Code Climate](https://codeclimate.com/github/ZeroOneStudio/omniauth-namba.png)](https://codeclimate.com/github/ZeroOneStudio/omniauth-namba)
 [![Dependency Status](https://gemnasium.com/ZeroOneStudio/omniauth-namba.png)](https://gemnasium.com/ZeroOneStudio/omniauth-namba)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ZeroOneStudio/omniauth-namba/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 This gem contains the Namba.kg strategy for OmniAuth. Namba.kg uses the OAuth 1.0a flow.
 
@@ -61,9 +62,4 @@ Many thanks to [@puzanov][] for active promotion.
 MIT License. Copyright (c) 2012-2013 [ZERO.ONE][]
 
 [ZERO.ONE]: http://zeroone.st
-
-
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ZeroOneStudio/omniauth-namba/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
